@@ -1,7 +1,15 @@
 <h1>New GIF</h1>
 
-<%= @gif.inspect %>
-
+<% if @gif.errors.messages[:url] %>
+  <p class="error">
+    URL - <%= @gif.errors.messages[:url].first %>
+  </p>
+<% end %>
+<% if @gif.errors.messages[:title] %>
+  <p class="error">
+    Title - <%= @gif.errors.messages[:title].first %>
+  </p>
+<% end %>
 <%= form_for @gif do |f| %>
 
   <%= f.label :url %>

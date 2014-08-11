@@ -18,4 +18,16 @@ feature "Applcation" do
     expect(page).to have_content "Welcome"
     expect(page).to have_content "gif created successfully"
   end
+
+  scenario "Can do stuff" do
+    visit "/"
+
+    expect(page).to have_content "Welcome"
+    expect(page).to have_content "New gif"
+    click_on "New gif"
+    expect(page).to have_content "New GIF"
+    click_on "Create Gif"
+    expect(page).to have_content "URL - can't be blank"
+    expect(page).to have_content "Title - can't be blank"
+  end
 end
