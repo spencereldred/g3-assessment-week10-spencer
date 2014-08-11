@@ -1,0 +1,15 @@
+<h1>New GIF</h1>
+
+<%= @gif.inspect %>
+
+<%= form_for @gif do |f| %>
+
+  <%= f.label :url %>
+  <%= f.text_field :url %><br>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+
+  <%= f.submit "Create Gif" %>
+
+<% end %>

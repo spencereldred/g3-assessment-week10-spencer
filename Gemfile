@@ -9,4 +9,5 @@ group :test, :development do
   gem "rspec-rails", "~> 3.0.2"
   gem "capybara"
   gem "launchy"
+  gem "pry"
 end
