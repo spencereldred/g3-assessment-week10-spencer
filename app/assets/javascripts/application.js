@@ -13,3 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+//$(document).ready(function(){
+
+  jQuery('h1').css('background', 'teal')
+
+//})
+

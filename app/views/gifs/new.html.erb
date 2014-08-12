@@ -12,11 +12,17 @@
 <% end %>
 <%= form_for @gif do |f| %>
 
-  <div style="display: inline"><%= f.label :url, "Url:" %>
-  <%= f.text_field :url, @gif.errors.messages[:url].first ? {style: "border: 2px solid red;"} : {style: "border: 1px solid black;"} %><span style="color:red"><%= @gif.errors.messages[:url].first %></span></div><br>
+  <p style="display: inline-block">
+    <%= f.label :url, "Url:" %>
+    <%= f.text_field :url, @gif.errors.messages[:url].first ? {style: "border: 2px solid red;"} : {style: "border: 1px solid black;"} %>
+    <span style="color:red"><%= @gif.errors.messages[:url].first %></span>
+  </p><br>
 
+  <p style="display: inline-block">
   <%= f.label :title, "Title:" %>
-  <%= f.text_field :title, @gif.errors.messages[:title].first ? {style: "border: 2px solid red;"} : {style: "border: 1px solid black;"} %><span style="color:red"><%= @gif.errors.messages[:title].first %></span><br>
+  <%= f.text_field :title, @gif.errors.messages[:title].first ? {style: "border: 2px solid red;"} : {style: "border: 1px solid black;"} %><span style="color:red"> <%= @gif.errors.messages[:title].first %></span><br>
+  </p><br>
+
 
   <%= f.submit "Create Gif" %>
 

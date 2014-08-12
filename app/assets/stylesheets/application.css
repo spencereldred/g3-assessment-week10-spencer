@@ -21,3 +21,19 @@
 .input_field {
     border: 3px solid red;
 }
+
+.field_with_errors {
+    display: inline-block;
+}
+
+.success {
+    background-color: lightgreen;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.flash {
+    margin-left: 5%;
+}
